@@ -1,10 +1,14 @@
 /*css*/
-a{
-    color: #610909;
-}
 body{
- font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- color: #B20000;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#b20000;
+}
+
+a{
+    color:#610909;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
 }
 /*PORTADA*/
 .hero{
@@ -31,22 +35,6 @@ body{
   font-size: 1.5rem;
   margin: 20px;
 }
-/* PRODUCTOS DESTACADOS */
-.flex-productos{
-    display: flex;
-    flex-wrap: wrap; /* permite varias filas */
-    gap: 20px;
-    justify-content: center;
-    padding: 40px;
-}
-
-.producto{
-    display: flex;
-    flex-direction: column; /* apila img + texto + botón */
-    align-items: center;
-    text-align: center;
-    width: 200px;
-}
 
 /* NEWSLETTER */
 .newsletter form{
@@ -56,17 +44,6 @@ body{
     margin-top: 10px;
 }
 
-/*FOOTER*/
-.footer-links{
-  color: #610909;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 40px;
-}
-
-.footer-links div{
-    flex: 1;
-}
 .flex-productos {
     display: flex;
     flex-wrap: wrap; 
@@ -95,11 +72,6 @@ body{
     display: block;
 }
 
-
-.dere img{
-    padding-left: 15px;
-    gap:15px;
-}
 /*gap es el espacio entre hijos dentro de un mismo padre.
 padding es el aire dentro de la caja.
 margin es el aire fuera de la caja.*/
