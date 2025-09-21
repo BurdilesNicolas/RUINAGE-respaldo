@@ -1,0 +1,136 @@
+/*css*/
+a{
+    color: #610909;
+}
+body{
+ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ color: #B20000;
+}
+/*PORTADA*/
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+    /*Fondo*/
+    background-image: url('../img/logos/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+}
+.left{
+  padding: 20px;
+  margin: 20px;
+  font-size: 1.5rem;
+  align-items: left;
+}
+.right{
+  align-items: right;
+  font-size: 1.5rem;
+  margin: 20px;
+}
+/* PRODUCTOS DESTACADOS */
+.flex-productos{
+    display: flex;
+    flex-wrap: wrap; /* permite varias filas */
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column; /* apila img + texto + botón */
+    align-items: center;
+    text-align: center;
+    width: 200px;
+}
+
+/* NEWSLETTER */
+.newsletter form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/*FOOTER*/
+.footer-links{
+  color: #610909;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.footer-links div{
+    flex: 1;
+}
+.flex-productos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;  
+    gap: 10px;             
+    padding: 20px;
+}
+
+/* Cada producto */
+.producto {
+    position: relative;
+    flex:290px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.producto:hover{
+  transform: scale(1.05);
+}
+
+/* Imágenes con tamaño uniforme */
+.producto img {
+    width: 100%;
+    height:600px;         /*todos los productos de la misma altura*/
+    display: block;
+}
+
+
+.dere img{
+    padding-left: 15px;
+    gap:15px;
+}
+/*gap es el espacio entre hijos dentro de un mismo padre.
+padding es el aire dentro de la caja.
+margin es el aire fuera de la caja.*/
+.img-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* imagen base */
+.img-container img {
+  width: 100%;
+  display: block;
+}
+
+/* imagen hover encima */
+.img-container .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* efecto hover */
+.img-container:hover .img-hover {
+  opacity: 1;
+}
+
+.img-container:hover .img-default {
+  opacity: 0;
+}
+

@@ -1,0 +1,67 @@
+/*CONTACTO*/
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #b20000;
+}
+a {
+    color: #610909;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+/* Contenedor del formulario */
+.form-contacto {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border: 2px solid #b20000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}   
+/* Títulos dentro del formulario */ 
+.form-contacto legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b20000;
+    margin-bottom: 10px;
+}
+/* Labels */
+.form-contacto label{
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+}
+/* Inputs, selects y textarea */
+.form-contacto input,
+.form-contacto select,
+.form-contacto textarea {
+    width: 100px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #610909;
+    border-radius: 6px;
+    font-size: 14px;
+}
+/* Textarea más grande */
+.form-contacto textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+/* Botón */
+.form-contacto button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #fce9c8;
+    color: #610909;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+/* Efecto hover en botón*/
+.form-contacto button:hover {
+    background-color: #f36161;
+}
