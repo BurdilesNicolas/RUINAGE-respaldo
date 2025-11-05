@@ -1,0 +1,423 @@
+.barrita {
+    margin-top: 0;
+  background-color: #610909;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 100vw;
+}
+
+.barrita p {
+  margin: 0; /* Elimina márgenes por defecto del párrafo */
+}
+
+
+/* === Barra superior de anuncios === */
+.barra-anuncios {
+  margin: 0;
+  width: 100vw;
+  background-color: #610909; /* rojo o el color que uses */
+  color: #fff;
+  overflow: hidden; /* oculta lo que se sale del contenedor */
+  white-space: nowrap;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 15px;
+  position: relative;
+}
+
+/* Contenedor que se mueve */
+.anuncios-movimiento {
+  display: inline-block;
+  animation: mover-anuncios 70s linear infinite; /* velocidad y repetición */
+}
+
+/* Los textos dentro del carrusel */
+.anuncios-movimiento span {
+  margin-right: 200px; /* espacio entre mensajes */
+}
+
+/* Animación del movimiento continuo */
+@keyframes mover-anuncios {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+
+
+/*HEADER (En .logo img ajusto tanto el tamaño, altura, ancho y la posicion con el relative para
+que quede centrado*/
+.logo img {
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  height: 200px; 
+  position: relative;
+}
+.top-bar {
+  position: relative;  /* referencia para el logo absoluto */
+  display: flex;
+  justify-content: space-between; /* links a la izquierda, icons a la derecha */
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  height: 80px;
+}
+header {
+    margin-top: 0;
+    position: fixed;   /* Hace que quede fijo */
+    top: 0;            /* Lo ubica en la parte superior */
+    right: -1%;           /* Alineado a la izquierda */
+    width: 100%;       /* hace que ocupe todo el ancho el header */
+    z-index: 1000;     /* sirve para que no se superpongan las cosas  */
+    background-color: rgb(255, 255, 255); /* Fondo para que no se superponga con el contenido */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* esto agrega una sombra */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0px 20px;
+    padding-bottom: 10px;
+}
+.productos {
+    margin-top: 170px; /* Ajustá según la altura de tu header */
+}
+#menu{
+   margin: 30px;
+   color: #610909;
+   background-color: #fff;
+   border: none;
+   font-size: 15px;
+}
+#menu:hover{
+    color: #b20000;
+    cursor: pointer;
+}
+.links ul {
+    display: none; /*No lo muestra */
+    position: absolute; /* Lo muestra por encima de todo*/
+    top: 100%; /* Lo ubica arriba*/
+    left: 0; /* Lo ubica a la izquierda*/
+    background-color: #fff;
+    list-style: none; /*Saca la decoracion de la lista*/
+    min-width: 160px; /*Establece el tamaño minimo*/
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    margin: 0;
+    padding: 0;
+    transform: translateX(25%); /* Centra horizontalmente el menú*/
+}
+.links ul li a{
+    display: block; 
+    padding: 10px;
+    color: #b20000;
+    text-decoration: none;
+}
+.links ul li a:hover{
+    background-color: #fff;
+}
+.links:hover ul {
+    display: block;
+}
+
+/*Posiciones del header*/
+.icons a{
+    margin-left: 20px;
+}
+
+.logo {
+    position: relative;
+    left: 75px;
+}
+
+.logo img{
+    max-height: 120px;
+}
+/*Barra de navegación*/
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    gap: 25px; /*Espacio entre los hijos*/
+    padding: 0;
+    margin: 10px 0 0 30px;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-weight: bold; /*Grosor del texto*/
+    color:#610909;
+}
+#cuenta {
+    background-color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+ /* 6) Underline slide (tipo enlace con grid) sacado del repositorio de botones */
+  .btn.underline {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-decoration: none; /* saca el subrayado normal */
+    color: inherit;        
+    display: inline-grid;  /* ahora usa grid */
+    justify-content: start; /* alinea el texto a la izquierda dentro de la grid */
+  }
+  /*Animacion links del nav con grid*/
+  .btn.underline span {
+    position: relative;
+  }
+  .btn.underline span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -3px;
+    height: 2px;
+    background: currentColor;
+    transition: right 0.3s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .btn.underline:hover span::after {
+    right: 0;
+  }
+
+footer{
+    color: #fff;
+    background-color:#610909;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.footer p{
+    color:#fff;
+}
+.docu a{
+    color:#fff;
+}
+.dere p{
+    text-align: center;
+}
+
+.dere img{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ===== Fondo borroso de toda la página ===== */
+.blur-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4); /* oscurece un poco */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 998;
+}
+
+.blur-bg.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== Panel lateral ===== */
+/* ===== Panel lateral blanco ===== */
+.search-panel {
+  position: fixed;
+  top:145px;
+  right: -420px; /* más negativo para ocultar del todo */
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.3);
+  padding: 50px 35px;
+  transition: right 0.5s ease;
+  z-index: 999;
+  color: #610909;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* evita que el padding sume al ancho */
+}
+
+.search-panel.active {
+  right: 0; /* visible al activarse */
+}
+
+
+/* Título */
+.search-panel h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #610909;
+  font-weight: bold;
+}
+
+/* Input */
+.search-panel input {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid #610909;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #610909;
+}
+
+/* Botón */
+.search-panel .search-btn {
+  width: 100%;
+  background-color: #610909;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-panel .search-btn:hover {
+  background-color: #b20000;
+  transform: scale(1.05);
+}
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #610909;
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===== Fondo borroso para el carrito ===== */
+#blurCart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 998;
+}
+
+#blurCart.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== Panel lateral del carrito ===== */
+.cart-panel {
+  position: fixed;
+  top: 145px;
+  right: -420px;
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.3);
+  padding: 50px 35px;
+  transition: right 0.5s ease;
+  z-index: 999;
+  color: #610909;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.cart-panel.active {
+  right: 0;
+}
+
+/* Título del carrito */
+.cart-panel h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #610909;
+  font-weight: bold;
+}
+
+/* Contenido del carrito */
+.cart-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Botón del carrito */
+.cart-btn {
+  width: 100%;
+  background-color: #610909;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #b20000;
+  transform: scale(1.05);
+}
+@media (max-width: 992px) { 
+  .top-bar {
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 15px; 
+    margin: 10px 0; 
+  }
+
+  .logo img {
+    max-height: 90px; 
+  }
+
+  .search-panel,
+  .cart-panel {
+    width: 70%; 
+    right: -70%;
+  }
+
+  .productos {
+    margin-top: 140px; 
+  }
+}
+
+
