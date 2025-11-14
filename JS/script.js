@@ -198,3 +198,99 @@ blurCart.addEventListener("click", () => {
     }
   }
 });
+document.querySelector(".search-btn").addEventListener("click", () => {
+  const query = document.querySelector(".search-panel input").value.toLowerCase().trim();
+  const productos = document.querySelectorAll(".producto");
+
+  let encontrado = false;
+
+  productos.forEach(producto => {
+    const nombre = producto.dataset.nombre.toLowerCase();
+    if (nombre.includes(query)) {
+      producto.scrollIntoView({ behavior: "smooth", block: "center" });
+      producto.style.outline = "3px solid #b20000";
+      setTimeout(() => (producto.style.outline = "none"), 2000);
+      encontrado = true;
+    }
+  });
+
+  if (!encontrado) {
+    alert("No se encontró ningún producto con ese nombre.");
+  }
+});
+// 🛒 === LÓGICA DEL CARRITO ===
+
+// Cargar carrito desde localStorage
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+// Elementos del DOM
+const cartContent = document.querySelector(".cart-content");
+
+// Función para actualizar el carrito en el panel
+function renderCarrito() {
+  cartContent.innerHTML = ""; // Limpia el panel
+
+  if (carrito.length === 0) {
+    cartContent.innerHTML = "<p>No tienes productos en el carrito todavía.</p>";
+    return;
+  }
+
+  carrito.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.classList.add("cart-item");
+    div.innerHTML = `
+      <img src="${item.imagen}" alt="${item.nombre}" width="60">
+      <div class="cart-info">
+        <h4>${item.nombre}</h4>
+        <p>$${item.precio}</p>
+      </div>
+      <button class="remove-item" data-index="${index}">✕</button>
+    `;
+    cartContent.appendChild(div);
+  });
+
+  // Actualiza LocalStorage
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  // Botones eliminar
+  document.querySelectorAll(".remove-item").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const i = e.target.dataset.index;
+      carrito.splice(i, 1);
+      renderCarrito();
+    });
+  });
+}
+
+// Detectar clicks en “Agregar al carrito”
+document.querySelectorAll(".add-to-cart").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    const producto = e.target.closest(".producto");
+    const nuevoProducto = {
+      nombre: producto.dataset.nombre,
+      precio: producto.dataset.precio,
+      imagen: producto.dataset.imagen
+    };
+
+    carrito.push(nuevoProducto);
+    renderCarrito();
+
+    // Abre el panel del carrito
+    document.getElementById("cartPanel").classList.add("active");
+    document.getElementById("blurCart").classList.add("active");
+  });
+});
+
+// Render inicial (si había algo guardado)
+renderCarrito();
+
+    function cambiarImagen(img) {
+      document.getElementById("mainImg").src = img.src;
+    }
+
+    // Selector de talle
+    const talles = document.querySelectorAll(".talles button");
+    talles.forEach(btn => btn.addEventListener("click", () => {
+      talles.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    }));

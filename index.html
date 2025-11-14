@@ -63,7 +63,7 @@
 
       <!-- Íconos a la derecha -->
 <div class="icons">
-        <button id="cuenta"><img src="img/logos/logo_cuenta.png" width="35" height="35" alt="Cuenta"></button>
+        <button id="cuenta"><a><img src="img/logos/logo_cuenta.png" width="35" height="35" alt="Cuenta"></a></button>
 <a href="#" id="openSearch"><img src="img/logos/lupa.png" width="35" height="35" alt="Buscar"></a>
   <a href="#" id="openCart"><img src="img/logos/carrito_new_recolored.png" width="35" height="35" alt="Carrito"></a>
 </div>
@@ -95,22 +95,36 @@
 
   <!-- PRODUCTOS DESTACADOS -->
   <section class="productos-destacados" id="dest">
-    <h2>Productos Destacados</h2>
-    <div class="flex-productos">
+  <h2>Productos Destacados</h2>
 
-      <article class="producto">
-        <div class="img-container">
-          <img src="img/productos/Abrigos/buzo destacado.png " alt="Buzo" width="1000" height="300">
-          <img src="img/productos/hover buzo destacado.jpg" alt="Pantalon" class="img-hover">
-        </div>
-        <div class="info-producto">
-        <h3>Buzo NY</h3>
-        <p class="precio">$65.000</p>
-        </div>
-        <button>Agregar al carrito</button>
-      </article>
+  <div class="flex-productos">
 
-      <article class="producto">
+    <article class="producto" 
+      data-nombre="buzo ny" 
+      data-precio="45000" 
+      data-imagen="img/productos/Abrigos/buzo destacado.png">
+
+      <!-- LINK INVISIBLE PARA IR A LA PÁGINA DEL PRODUCTO -->
+      <a href="producto1.html" class="producto-link"></a>
+
+      <div class="img-container">
+        <img src="img/productos/Abrigos/buzo destacado.png" 
+             alt="Buzo" class="img-default">
+        <img src="img/productos/hover buzo destacado.jpg" 
+             alt="Buzo Hover" class="img-hover">
+      </div>
+
+      <div class="info-producto">
+        <h3>buzo ny</h3>
+        <p class="precio">$45.000</p>
+      </div>
+
+      <button class="add-to-cart">Agregar al carrito</button>
+    </article>
+
+      <article class="producto" data-nombre="campera carhartt roja"
+               data-precio="100.000" 
+         data-imagen="img/productos/Abrigos/campera carhartt rama.png" >
         <div class="img-container">
           <div class="img-container">
             <img src="img/productos/Abrigos/campera carhartt rama.png" alt="Pantalones" width="135" height="150">
@@ -119,36 +133,47 @@
           <img src="img/productos/hover campera carhartt.jpg" alt="Remera Hover" class="img-hover">
         </div>
         <div class="info-producto">
-        <h3>Buzo NY</h3>
-        <p class="precio">$65.000</p>
+        <h3>Campera carhartt roja</h3>
+        <p class="precio">$100.000</p>
         </div>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart">Agregar al carrito</button>
       </article>
 
-      <article class="producto">
+      <article class="producto" data-nombre="remera boxy bocas"
+               data-precio="25.000" 
+         data-imagen="img/productos/Remeras/remera rama.png">
         <div class="img-container">
           <img src="img/productos/Remeras/remera rama.png" alt="Boxy" class="img-default">
           <img src="img/productos/hover remera destacada.jpeg" alt="Remera Hover" class="img-hover">
         </div>
         <div class="info-producto">
-        <h3>Buzo NY</h3>
-        <p class="precio">$65.000</p>
+        <h3>Remera boxy</h3>
+        <p class="precio">$25.000</p>
         </div>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart">Agregar al carrito</button>
       </article>
 
-      <article class="producto">
+      <article class="producto" data-nombre="baggy marron" 
+               data-precio="65000" 
+         data-imagen="img/productos/Pantalones/pantalon destacado.png">
         <div class="img-container">
           <img src="img/productos/Pantalones/pantalon destacado.png" alt="Pantalon baggy" class="img-default">
           <img src="img/productos/hover pantalon destacado.jpg" alt="Pantalon baggy" class="img-hover">
         </div>
         <div class="info-producto">
-        <h3>Buzo NY</h3>
+        <h3>Baggy cafe</h3>
         <p class="precio">$65.000</p>
         </div>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart">Agregar al carrito</button>
       </article>
     </div>
+  </section>
+
+
+
+
+    <!--PORTADA-->
+  <section class="hero2">
   </section>
 
 
@@ -158,7 +183,9 @@
     <h2>Destacados en REALTREE</h2>
     <div class="flex-productos">
 
-      <article class="producto">
+      <article class="producto" data-nombre="campera realtree"
+               data-precio="100.000" 
+         data-imagen="img/productos/Abrigos/cold culture x realtree jacket.png">
         <div class="img-container">
           <img src="img/productos/Abrigos/cold culture x realtree jacket.png" alt="Buzo" width="1000" height="300">
           <img src="img/productos/hover campera realtree.jpeg" alt="Pantalon" class="img-hover">
@@ -167,10 +194,12 @@
         <h3>Cazadora realtree</h3>
         <p class="precio">$100.000</p>
         </div>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart">Agregar al carrito</button>
       </article>
 
-      <article class="producto">
+      <article class="producto" data-nombre="remera realtree" data-nombre="boxy realtree"
+               data-precio="25.000" 
+         data-imagen="img/productos/Remeras/remera realtree destacada.png">
         <div class="img-container">
           <div class="img-container">
             <img src="img/productos/Remeras/remera realtree destacada.png" alt="Pantalones" width="135" height="150">
@@ -181,10 +210,12 @@
         <h3>Remera realtree boxy</h3>
         <p class="precio">$25.000</p>
         </div>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart" >Agregar al carrito</button>
       </article>
 
-      <article class="producto">
+      <article class="producto" data-nombre="gorra realtree"          
+      data-precio="22000" 
+         data-imagen="img/productos/Accesorios/gorra realtree.png">
         <div class="img-container">
           <img src="img/productos/Accesorios/gorra realtree.png" alt="Boxy" class="img-default">
           <img src="img/productos/hover gorra realtree.jpeg" alt="Remera Hover" class="img-hover">
@@ -193,10 +224,12 @@
         <h3>gorra stussy realtree</h3>
         <p class="precio">$22.000</p>
         </div>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart">Agregar al carrito</button>
       </article>
 
-      <article class="producto">
+      <article class="producto" data-nombre="pantalon realtree"
+                data-precio="65000" 
+         data-imagen="img/productos/Pantalones/pantalon realtree dest.png">
         <div class="img-container">
           <img src="img/productos/Pantalones/pantalon realtree dest.png" alt="Pantalon baggy" class="img-default">
           <img src="img/productos/hover pantalon realtree dest.jpeg" alt="Pantalon baggy" class="img-hover">
@@ -205,7 +238,7 @@
         <h3>Pantalon realtree double-knee</h3>
         <p class="precio">$65.000</p>
         </div>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart">Agregar al carrito</button>
       </article>
     </div>
   </section>
@@ -214,34 +247,13 @@
 
 
   <!-- FOOTER -->
-  <div class="footer-container">
-    <div class="footer-newsletter">
-      <h3>ENTÉRATE SIEMPRE DE LAS ÚLTIMAS NOVEDADES, DROPS EXCLUSIVOS Y MUCHO MÁS.</h3>
-      <form>
-        <input type="email" placeholder="Correo electrónico">
-        <button type="submit">Suscribirse</button>
-      </form>
-      <p style="font-size:12px;">Al registrarte, aceptas recibir correos electrónicos de marketing. Consulta nuestra <a
-          href="#">Política de privacidad</a>.</p>
-    </div>
-
-    <div class="footer-legal">
-      <ul>
-        <li><a href="document/RuinageTerminos.pdf">Aviso legal</a></li>
-        <li><a href="document/RuinageTerminos.pdf">Términos y condiciones</a></li>
-        <li><a href="document/RuinageTerminos.pdf">Política de cookies</a></li>
-        <li><a href="document/RuinageTerminos.pdf">Política de privacidad</a></li>
-        <li><a href="document/RuinageTerminos.pdf">Política de devoluciones</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="footer-payments">
-      <img src="img/logos/medios de pago.png" alt="Métodos de pago">
-    </div>
-    <p>© 2025 - RUINAGE® Marca registrada</p>
-  </div>
+    <footer>
+        <div class="dere">
+              <p> &copy; 2025 RUINAGE - Todos los derechos reservados.</p>
+              <img src="img/logos/medios de pago.png" alt="medios de pago">
+            <p class="docu"> <a href="document/RuinageTerminos.pdf">Aviso legal - Términos y condiciones - Políticas de devoluciones - Política de cookies - Políticas de privacidad<br></a></p>
+        </div>
+    </footer>
 
 <div class="cookie-banner" id="cookieBanner">
   <p>
